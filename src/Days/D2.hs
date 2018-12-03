@@ -5,6 +5,7 @@ import Data.List
 import Data.Function
 import Data.Ord
 import Control.Monad
+import Data.Maybe
 
 solve2p1 = uncurry (*) . foldr count (0,0) 
   . map (
@@ -22,12 +23,12 @@ solve2p1 = uncurry (*) . foldr count (0,0)
 solve2p2 = foo . lines $ day2
   where
     foo [] = error "no solution"
-    foo (x:xs) = case filter fst $ fmap (check x) xs of
-      [(True, res)] -> res
+    foo (x:xs) = case catMaybes $ fmap (check x) xs of
+      [res] -> res
       [] -> foo xs
     check x y = 
       let diff = filter (uncurry (/=)) $ zip x y in
       if length diff == 1 then
-        (True, map fst . filter (uncurry (==)) $ zip x y)
+        Just (map fst . filter (uncurry (==)) $ zip x y)
       else 
-        (False, "")
+        Nothing

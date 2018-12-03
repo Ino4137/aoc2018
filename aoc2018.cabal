@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 681e3fd9a15be965f80d92900a30d200b89ef1cf7a26db1319086f693d163be5
+-- hash: 43fca578c94a6fed2e5581dc21e2c99844a333f044cad701f78b8453ccb5a1b8
 
 name:           aoc2018
 version:        0.1.0.0
@@ -19,7 +19,6 @@ license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
@@ -29,6 +28,7 @@ library
   exposed-modules:
       Days.D1
       Days.D2
+      Days.D3
       Inputs
       Lib
   other-modules:
