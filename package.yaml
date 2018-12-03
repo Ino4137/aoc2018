@@ -1,0 +1,38 @@
+name:                aoc2018
+version:             0.1.0.0
+github:              "Welperooni/aoc2018"
+license:             MIT
+author:              "Welperooni"
+maintainer:          "welperooni@gmail.com"
+copyright:           "Welperooni"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/Welperooni/aoc2018#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  default-extensions:
+  - QuasiQuotes
+  - ViewPatterns
+  - LambdaCase
+  dependencies:
+  - raw-strings-qq
+  - containers
+  source-dirs: src
+
+executables:
+  aoc2018-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - aoc2018
+
