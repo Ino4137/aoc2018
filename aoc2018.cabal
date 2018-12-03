@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 14191319f608da0f5352d3e0032a171121aa6fe840274386ead07f6f899bbc0e
+-- hash: 681e3fd9a15be965f80d92900a30d200b89ef1cf7a26db1319086f693d163be5
 
 name:           aoc2018
 version:        0.1.0.0
@@ -14,7 +14,7 @@ bug-reports:    https://github.com/Welperooni/aoc2018/issues
 author:         Welperooni
 maintainer:     welperooni@gmail.com
 copyright:      Welperooni
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Days.D1
+      Days.D2
       Inputs
       Lib
   other-modules:
@@ -38,7 +39,6 @@ library
   build-depends:
       base >=4.7 && <5
     , containers
-    , mtl
     , raw-strings-qq
   default-language: Haskell2010
 
